@@ -90,16 +90,25 @@
             </div>
           </a>
         </section>
+        <mt-button type="danger" style="width:100%" @click="logout" v-show="userInfo._id">退出登录</mt-button>
       </section>
   </div>
 </template>
 
 <script>
 import {mapState} from 'vuex'
+import { MessageBox } from 'mint-ui'
 import HeaderTop from '../../components/HeaderTop/HeaderTop'
 export default {
   computed: {
       ...mapState(['userInfo'])
+    },
+    methods:{
+      logout(){
+        MessageBox.confirm('确定执行此操作?').then(action => {
+        this.$store.dispatch('logout')
+    })
+      }
     },
   components: {
     HeaderTop
