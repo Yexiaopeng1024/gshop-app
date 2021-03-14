@@ -52,11 +52,7 @@
 import {mapState} from 'vuex'
 import Star from '../Star/Star'
 export default {
-    data(){
-        return {
-            baseImgUrl:'http://cangdu.org:8001/img/'
-        }
-    },
+  
     computed: {
         ...mapState(['shops'])
     },

@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import {mapState} from 'vuex'

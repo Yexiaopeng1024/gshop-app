@@ -105,6 +105,8 @@ export default {
     },
     methods:{
       logout(){
+        let a = {a:1,...mapState(['userInfo'])}
+        console.log(a);
         MessageBox.confirm('确定执行此操作?').then(action => {
         this.$store.dispatch('logout')
     })
